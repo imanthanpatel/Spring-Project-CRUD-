@@ -2,6 +2,7 @@ package com.manthan.demo.Mapper;
 
 
 import com.manthan.demo.DTO.UserDTO;
+import com.manthan.demo.model.Address;
 import com.manthan.demo.model.User;
 
 public class UserMapper {
@@ -10,6 +11,7 @@ public class UserMapper {
         dto.setId(user.getId());
         dto.setEmail(user.getEmail());
         dto.setPassword(user.getPassword());
+        dto.setAddresses(user.getAddress());
         return dto;
     }
 

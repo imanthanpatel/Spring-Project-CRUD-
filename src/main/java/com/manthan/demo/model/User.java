@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 
 @Getter
 @Setter
@@ -21,4 +23,7 @@ public class User {
     private String email;
     @Column(nullable = false)
     private String password;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "User_id")
+    private List<Address> address;
 }
